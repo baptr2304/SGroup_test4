@@ -1,0 +1,333 @@
+:root {
+  --default--font--size: 1.3rem;
+  --font--size--text:0.9rem;
+  --bgr--color--nav-item: rgb(240 242 245);
+  --bgr-color--btn--add: #1b74e4;
+  --bgr-color-btn-info: #e4e6eb;
+  --color-text:#65676b;
+  --box--shadow--chat: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  font-size: 62.5%;
+  width: 100%;
+  height: auto;
+  font-size: var(--default--font--size);
+  font-family: Arial;
+}
+
+body .nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.7rem 0.5rem 0;
+  margin-right: 2rem;
+}
+body .container {
+  width: 100%;
+  height: auto;
+}
+body .profile {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+body .chat {
+  width: 4rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.nav .nav--size {
+  flex: 1;
+}
+.nav .nav__i1 {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.nav .nav__i2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .nav__i3 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.nav__i1 .home-page__ic {
+  font-size: 2.5rem;
+  padding: 0 0.5rem 0 1rem;
+  color: rgb(7, 117, 232);
+}
+.nav__i1 .search-box {
+  background-color: var(--bgr--color--nav-item);
+  height: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+}
+
+.search-box .search-box___ic {
+  font-size: 1rem;
+  color: #6f7175;
+}
+.search-box .search-box__input {
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+  background-color: var(--bgr--color--nav-item);
+  font-size: 1rem;
+}
+
+.nav__i2 .nav__i2--ic {
+  padding: 0 2rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.container .cover-img {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, #5393c6, #82b0d6, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cover-img img {
+  width: 70%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 0 0 1rem 1rem;
+}
+.cover-img .cover-img__edit-btn {
+  font-size: var(--font--size--text);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 1rem;
+  right: 16.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.nav__i3 .nav__i3--style {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav__i3 .nav__i3--style + .nav__i3--style {
+  margin-left: 0.3rem;
+}
+.nav__i3 i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgr-color-btn-info);
+}
+
+.profile .personal-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2rem;
+}
+.profile .profile__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-info img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: solid #ffffff 0.3rem;
+}
+
+.info-friend .info-friend__name {
+  display: flex;
+}
+.info-friend p {
+  color: var(--color-text);
+}
+.info-friend .info-friend__btn {
+  font-size: 1.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--bgr-color-btn-info);
+  background-color: var(--bgr-color-btn-info);
+  border-radius: 50%;
+  position: absolute;
+  right: 18rem;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.info-friend__name span {
+  font-size: 2rem;
+}
+
+.profile__btn .btn-add {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--bgr-color--btn--add);
+  color: #ffffff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.profile__btn .btn-update {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: #e4e6eb;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn-add .btn-add__ic {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--bgr-color--btn--add);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bgr-color--btn--add);
+  background: #ffffff;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  font-size: var(--font--size--text);
+}
+
+.btn-update i + p {
+  margin-left: 0.5rem;
+}
+.btn-update i {
+  font-size: 1rem;
+}
+
+.chat__mini-chat .mini-chat {
+  position: relative;
+}
+
+.mini-chat--style {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: var(--box--shadow--chat);
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.mini-chat img:hover {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  margin-bottom: 0.1rem;
+  transition: 0.2s;
+}
+.mini-chat .content {
+  height: 4rem;
+  width: 4rem;
+  background: #ffffff;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  box-shadow: var(--box--shadow--chat);
+  right: 6rem;
+  top: 0;
+  position: absolute;
+  border-radius: 0.5rem;
+}
+.mini-chat .content::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  right: -0.5rem;
+  bottom: 1rem;
+  background-color: red;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+.mini-chat .mini-chat__close {
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 0.1rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 0.3rem;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s;
+  visibility: hidden;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.8rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.mini-chat:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mini-chat:hover .mini-chat__close {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chat__new-mess i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  right: 1rem;
+}
+
+.content span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.content p {
+  font-size: var(--font--size--text);
+}/*# sourceMappingURL=style.css.map */
